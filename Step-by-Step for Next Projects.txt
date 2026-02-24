@@ -1,0 +1,58 @@
+Step-by-Step for Next Projects
+
+Let’s say your next project is hello-world.
+
+1️⃣ Place the new project inside your local repo
+D:\MASHUP\React\hello-world
+
+Make sure it has its normal structure (src/, public/, package.json, etc.)
+
+Do NOT initialize Git inside this folder — Git should only exist at the repo root (D:\MASHUP\React\.git)
+
+Important: If you already ran npx create-react-app hello-world, run it like this to avoid inner .git:
+
+npx create-react-app hello-world --no-git
+2️⃣ Stage the folder for Git
+
+From the root of your repo:
+
+cd D:\MASHUP\React
+git add hello-world
+
+Only the folder you want is staged
+
+Nothing else will be affected
+
+3️⃣ Commit the changes
+git commit -m "Add hello-world project"
+
+This will commit only the hello-world folder
+
+4️⃣ Push to GitHub
+git push origin main
+
+✅ Now GitHub will show:
+
+React (repo)
+ ├─ welcomecard/
+ └─ hello-world/
+
+Each project is its own folder
+
+All files inside each project are visible
+
+No right-arrow icons or submodule issues
+
+⚡ Best Practices Going Forward
+
+Always work from the root repo folder (D:\MASHUP\React)
+
+Never initialize Git inside individual projects (--no-git with create-react-app)
+
+Stage only the project folder you want to push:
+
+git add project-folder
+
+Commit and push after adding a project
+
+Use .gitignore to avoid pushing node_modules/
